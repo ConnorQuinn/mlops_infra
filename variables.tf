@@ -33,3 +33,12 @@ variable "prod_vnet_cidr" {
   description = "VNet CIDR range"
 }
 
+variable "build_agent_subnet_cidr" {
+  type        = string
+  description = "Subnet CIDR range"
+}
+
+variable "gateway_subnet_cidr" {
+  type        = string
+  description = "Subnet CIDR range"
+}
