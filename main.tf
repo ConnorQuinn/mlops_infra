@@ -23,6 +23,7 @@ resource "azurerm_key_vault" "kv" {
   sku_name            = "standard"
 }
 
+
 ##### DEV STUFF #####
 
 
