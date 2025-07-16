@@ -18,6 +18,12 @@ variable "location" {
   description = "The location"
 }
 
+variable "location_short" {
+  type        = string
+  description = "The location in short form, e.g. weu for westeurope"
+}
+
+
 variable "hub_vnet_cidr" {
   type        = string
   description = "VNet CIDR range"

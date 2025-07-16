@@ -5,24 +5,38 @@ locals {
     application = var.application
   }
 
-  hub_rg_name   = "rg-hub-${var.application}-${var.location}"
-  dev_rg_name   = "rg-dev-${var.application}-${var.location}"
-  test_rg_name  = "rg-test-${var.application}-${var.location}"
-  prod_rg_name  = "rg-prod-${var.application}-${var.location}"
-  keyvault_name = "kv-hub-${var.application}-${var.location}"
-  # vnet_name                 = "vnet-${var.environment}-${var.application}-${var.location}"
-  # infra_snet_name       = "snet-infra-${var.environment}-${var.application}-${var.location}"
-  # public_snet_name      = "snet-public-${var.environment}-${var.application}-${var.location}"
-  # private_snet_name     = "snet-private-${var.environment}-${var.application}-${var.location}"
-  # infra_nsg_name        = "nsg-infra-${var.environment}-${var.application}-${var.location}"
-  # public_nsg_name       = "nsg-public-${var.environment}-${var.application}-${var.location}"
-  # private_nsg_name      = "nsg-private${var.environment}-${var.application}-${var.location}"
-  # landing_name              = "strblob${var.environment}${var.application}${var.location}"
-  # lake_name                 = "stradls${var.environment}${var.application}${var.location}"
-  # adf_name                  = "adf-${var.environment}-${var.application}-${var.location}"
-  # databricks_workspace_name = "dbx-${var.environment}-${var.application}-${var.location}"
-  # metastore_storage_name = "metastore${var.environment}${var.application}${var.location}"
-  # access_connector_name = "ucac-${var.environment}-${var.application}-${var.location}"
+  hub_rg_name   = "rg-hub-${var.application}-${var.location_short}"
+  dev_rg_name   = "rg-dev-${var.application}-${var.location_short}"
+  test_rg_name  = "rg-test-${var.application}-${var.location_short}"
+  prod_rg_name  = "rg-prod-${var.application}-${var.location_short}"
+  keyvault_name = "kv-hub-${var.application}-${var.location_short}"
+  # vnet_name                 = "vnet-${var.environment}-${var.application}-${var.location_short}"
+  infra_snet_dev           = "snet-infra-dev-${var.application}-${var.location_short}"
+  public_snet_dev          = "snet-public-dev-${var.application}-${var.location_short}"
+  private_snet_dev         = "snet-private-dev-${var.application}-${var.location_short}"
+  public_nsg_dev           = "nsg-public-dev-${var.application}-${var.location_short}"
+  private_nsg_dev          = "nsg-private-dev-${var.application}-${var.location_short}"
+  adls_name_dev            = "stradlsdev${var.application}${var.location_short}"
+  databricks_workspace_dev = "dbx-dev-${var.application}-${var.location_short}"
+  ucac_dev                 = "ucac-dev-${var.application}-${var.location_short}"
+
+  infra_snet_prod           = "snet-infra-prod-${var.application}-${var.location_short}"
+  public_snet_prod          = "snet-public-prod-${var.application}-${var.location_short}"
+  private_snet_prod         = "snet-private-prod-${var.application}-${var.location_short}"
+  public_nsg_prod           = "nsg-public-prod-${var.application}-${var.location_short}"
+  private_nsg_prod          = "nsg-private-prod-${var.application}-${var.location_short}"
+  adls_name_prod            = "stradlsprod${var.application}${var.location_short}"
+  databricks_workspace_prod = "dbx-prod-${var.application}-${var.location_short}"
+  ucac_prod                 = "ucac-prod-${var.application}-${var.location_short}"
+
+
+  # infra_nsg_dev        = "nsg-infra-dev-${var.application}-${var.location_short}"
+  # lake_name                 = "stradls${var.environment}${var.application}${var.location_short}"
+  # adf_name                  = "adf-${var.environment}-${var.application}-${var.location_short}"\
+  # landing_name              = "strblob${var.environment}${var.application}${var.location_short}"
+
+  # metastore_storage_name = "metastore${var.environment}${var.application}${var.location_short}"
+  # access_connector_name = "ucac-${var.environment}-${var.application}-${var.location_short}"
 
   # allow-eg-in = {
   #   access = "Allow"

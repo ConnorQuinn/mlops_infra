@@ -19,9 +19,9 @@ resource "random_password" "admin_password" {
   lower   = true
   numeric = true
 
-  lifecycle {
-    prevent_destroy = true
-  }
+  # lifecycle {
+  #   prevent_destroy = true
+  # }
 }
 
 resource "azurerm_virtual_machine" "build_agent_vm" {
