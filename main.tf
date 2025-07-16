@@ -21,7 +21,17 @@ resource "azurerm_key_vault" "kv" {
   resource_group_name = azurerm_resource_group.hub_rg.name
   tenant_id           = data.azurerm_client_config.current.tenant_id
   sku_name            = "standard"
+  enable_rbac_authorization   = true 
 }
+
+
+# resource "azuread_application" "databricks_mlops_sp" {
+#   display_name = "databricks-mlops-sp"
+# }
+
+# resource "azuread_service_principal" "databricks_mlops_sp" {
+#   client_id = azuread_application.databricks_mlops_sp.application_id
+# }
 
 
 ##### DEV STUFF #####
